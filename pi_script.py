@@ -22,8 +22,13 @@ def connectPi():
     return output
 
 
+def getCurrentDirectory():
+    return os.path.dirname(os.path.realpath(__file__))
+
+
 def openVNCApp():
     os.system("open /Applications/VNC\ Viewer.app")
+    print(getCurrentDirectory())
 
 
 vncOutput = connectPi()
